@@ -1,0 +1,22 @@
+program cekAngka
+variabel
+    angka, pertama, kedua: integer
+    kebenaran: boolean
+algoritma
+    input(angka)
+    pertama = angka % 10
+    angka = angka / 10
+    kebenaran = true
+
+    while angka > 0 do
+        kedua = angka % 10
+        if (pertama - kedua != 1) and (kedua - pertama != 1) then
+            kebenaran = false
+            break
+        end if
+        pertama = kedua
+        angka = angka / 10
+    end while
+
+    output(kebenaran)
+end program

@@ -1,0 +1,27 @@
+program HitungHargaAkhir
+variabel
+    totalBelanja, hargaAkhir: integer
+    kartu, diskon, cashback: boolean
+algoritma
+    input(totalBelanja, kartu)
+    if totalBelanja >= 200000 and kartu = true then
+        diskon = true
+        cashback = true
+    else if totalBelanja >= 100000 then
+        diskon = true
+        cashback = false
+    end if
+
+    if diskon = true and cashback = true then
+        hargaAkhir = (totalBelanja - (totalBelanja * 10 / 100)) - 75000
+    else if diskon = true and cashback = false then
+        hargaAkhir = totalBelanja - (totalBelanja * 10 / 100)
+    else
+        hargaAkhir = totalBelanja
+    end if
+
+    output("Kartu?", kartu)
+    output("Diskon", diskon)
+    output("Cashback?", cashback)
+    output("Rp", hargaAkhir)
+end program

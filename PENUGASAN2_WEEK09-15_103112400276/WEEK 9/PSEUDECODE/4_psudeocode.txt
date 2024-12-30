@@ -1,0 +1,16 @@
+program KelipatanTigaDanLima
+variabel
+    angka: integer
+algoritma
+    output("Masukkan angka : ")
+    input(angka)
+    if angka % 3 == 0 and angka % 5 == 0 then
+        output("Kelipatan 3 dan 5")
+    else if angka % 3 == 0 then
+        output("Kelipatan 3")
+    else if angka % 5 == 0 then
+        output("Kelipatan 5")
+    else
+        output("Bukan kelipatan 3 dan 5")
+    end if
+end program
